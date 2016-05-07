@@ -1,0 +1,22 @@
+= form_for @warehouse_stock do |f|
+  - if @warehouse_stock.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@warehouse_stock.errors.count, "error")} prohibited this warehouse_stock from being saved:"
+      %ul
+        - @warehouse_stock.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :stock_id
+    = f.number_field :stock_id
+  .field
+    = f.label :warehouse_id
+    = f.number_field :warehouse_id
+  .field
+    = f.label :product_id
+    = f.number_field :product_id
+  .field
+    = f.label :quantity
+    = f.number_field :quantity
+  .actions
+    = f.submit 'Save'

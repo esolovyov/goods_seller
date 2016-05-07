@@ -1,0 +1,23 @@
+%h1 Listing stock_members
+
+%table
+  %thead
+    %tr
+      %th Seller
+      %th Stock
+      %th
+      %th
+      %th
+
+  %tbody
+    - @stock_members.each do |stock_member|
+      %tr
+        %td= stock_member.seller_id
+        %td= stock_member.stock_id
+        %td= link_to 'Show', stock_member
+        %td= link_to 'Edit', edit_stock_member_path(stock_member)
+        %td= link_to 'Destroy', stock_member, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Stock member', new_stock_member_path

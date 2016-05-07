@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  seller_id: 1
+  price: 9.99
+  delivery_price: 9.99
+  region: MyString
+  address: MyString
+  comment: MyText
+
+two:
+  seller_id: 1
+  price: 9.99
+  delivery_price: 9.99
+  region: MyString
+  address: MyString
+  comment: MyText

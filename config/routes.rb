@@ -1,7 +1,20 @@
 Rails.application.routes.draw do
+  resources :comments
+  resources :order_items
+  resources :orders
+  resources :buyers
+  resources :stock_transactions
+  resources :warehouse_stocks
+  resources :warehouses
+  resources :stock_members
+  resources :stocks
+  resources :categories
+  resources :products
+  resources :sellers
+
   mount MailsViewer::Engine => '/delivered_mails'
 
-  root to: "home#index"
+  root 'home#index'
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

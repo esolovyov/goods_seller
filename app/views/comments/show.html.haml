@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @comment.user_id
+%p
+  %b Parent:
+  = @comment.parent_id
+%p
+  %b Body:
+  = @comment.body
+%p
+  %b Assignment type:
+  = @comment.assignment_type
+%p
+  %b Assignment:
+  = @comment.assignment_id
+
+= link_to 'Edit', edit_comment_path(@comment)
+\|
+= link_to 'Back', comments_path

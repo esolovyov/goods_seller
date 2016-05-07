@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Seller:
+  = @stock_member.seller_id
+%p
+  %b Stock:
+  = @stock_member.stock_id
+
+= link_to 'Edit', edit_stock_member_path(@stock_member)
+\|
+= link_to 'Back', stock_members_path

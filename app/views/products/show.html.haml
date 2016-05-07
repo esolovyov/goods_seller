@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Seller:
+  = @product.seller_id
+%p
+  %b Category:
+  = @product.category_id
+%p
+  %b Min price:
+  = @product.min_price
+%p
+  %b Max price:
+  = @product.max_price
+%p
+  %b Quantity:
+  = @product.quantity
+%p
+  %b Rating:
+  = @product.rating
+%p
+  %b Name:
+  = @product.name
+%p
+  %b Description:
+  = @product.description
+
+= link_to 'Edit', edit_product_path(@product)
+\|
+= link_to 'Back', products_path

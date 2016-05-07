@@ -1,0 +1,29 @@
+%h1 Listing warehouses
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Stock
+      %th Region
+      %th Adress
+      %th Size
+      %th
+      %th
+      %th
+
+  %tbody
+    - @warehouses.each do |warehouse|
+      %tr
+        %td= warehouse.name
+        %td= warehouse.stock_id
+        %td= warehouse.region
+        %td= warehouse.adress
+        %td= warehouse.size
+        %td= link_to 'Show', warehouse
+        %td= link_to 'Edit', edit_warehouse_path(warehouse)
+        %td= link_to 'Destroy', warehouse, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Warehouse', new_warehouse_path

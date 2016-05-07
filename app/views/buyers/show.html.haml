@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @buyer.user_id
+%p
+  %b Region:
+  = @buyer.region
+%p
+  %b Address:
+  = @buyer.address
+%p
+  %b Rating:
+  = @buyer.rating
+%p
+  %b Paiment info:
+  = @buyer.paiment_info
+%p
+  %b Purchases counter:
+  = @buyer.purchases_counter
+
+= link_to 'Edit', edit_buyer_path(@buyer)
+\|
+= link_to 'Back', buyers_path

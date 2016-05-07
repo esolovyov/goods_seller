@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Seller:
+  = @order.seller_id
+%p
+  %b Price:
+  = @order.price
+%p
+  %b Delivery price:
+  = @order.delivery_price
+%p
+  %b Region:
+  = @order.region
+%p
+  %b Address:
+  = @order.address
+%p
+  %b Comment:
+  = @order.comment
+
+= link_to 'Edit', edit_order_path(@order)
+\|
+= link_to 'Back', orders_path

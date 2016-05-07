@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @stock.user_id
+%p
+  %b Name:
+  = @stock.name
+%p
+  %b Description:
+  = @stock.description
+%p
+  %b Region:
+  = @stock.region
+%p
+  %b Address:
+  = @stock.address
+%p
+  %b Store price:
+  = @stock.store_price
+%p
+  %b Rating:
+  = @stock.rating
+
+= link_to 'Edit', edit_stock_path(@stock)
+\|
+= link_to 'Back', stocks_path

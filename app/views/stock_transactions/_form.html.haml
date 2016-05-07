@@ -1,0 +1,31 @@
+= form_for @stock_transaction do |f|
+  - if @stock_transaction.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@stock_transaction.errors.count, "error")} prohibited this stock_transaction from being saved:"
+      %ul
+        - @stock_transaction.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :seller_id
+    = f.number_field :seller_id
+  .field
+    = f.label :origin_warehouse_id
+    = f.number_field :origin_warehouse_id
+  .field
+    = f.label :destination_warehouse_id
+    = f.number_field :destination_warehouse_id
+  .field
+    = f.label :status
+    = f.text_field :status
+  .field
+    = f.label :product_id
+    = f.number_field :product_id
+  .field
+    = f.label :quantity
+    = f.number_field :quantity
+  .field
+    = f.label :invoice_uid
+    = f.text_field :invoice_uid
+  .actions
+    = f.submit 'Save'

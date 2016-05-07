@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Stock:
+  = @warehouse_stock.stock_id
+%p
+  %b Warehouse:
+  = @warehouse_stock.warehouse_id
+%p
+  %b Product:
+  = @warehouse_stock.product_id
+%p
+  %b Quantity:
+  = @warehouse_stock.quantity
+
+= link_to 'Edit', edit_warehouse_stock_path(@warehouse_stock)
+\|
+= link_to 'Back', warehouse_stocks_path

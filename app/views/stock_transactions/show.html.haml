@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Seller:
+  = @stock_transaction.seller_id
+%p
+  %b Origin warehouse:
+  = @stock_transaction.origin_warehouse_id
+%p
+  %b Destination warehouse:
+  = @stock_transaction.destination_warehouse_id
+%p
+  %b Status:
+  = @stock_transaction.status
+%p
+  %b Product:
+  = @stock_transaction.product_id
+%p
+  %b Quantity:
+  = @stock_transaction.quantity
+%p
+  %b Invoice uid:
+  = @stock_transaction.invoice_uid
+
+= link_to 'Edit', edit_stock_transaction_path(@stock_transaction)
+\|
+= link_to 'Back', stock_transactions_path

@@ -1,0 +1,27 @@
+%h1 Listing warehouse_stocks
+
+%table
+  %thead
+    %tr
+      %th Stock
+      %th Warehouse
+      %th Product
+      %th Quantity
+      %th
+      %th
+      %th
+
+  %tbody
+    - @warehouse_stocks.each do |warehouse_stock|
+      %tr
+        %td= warehouse_stock.stock_id
+        %td= warehouse_stock.warehouse_id
+        %td= warehouse_stock.product_id
+        %td= warehouse_stock.quantity
+        %td= link_to 'Show', warehouse_stock
+        %td= link_to 'Edit', edit_warehouse_stock_path(warehouse_stock)
+        %td= link_to 'Destroy', warehouse_stock, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Warehouse stock', new_warehouse_stock_path

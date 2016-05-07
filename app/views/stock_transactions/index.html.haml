@@ -1,0 +1,33 @@
+%h1 Listing stock_transactions
+
+%table
+  %thead
+    %tr
+      %th Seller
+      %th Origin warehouse
+      %th Destination warehouse
+      %th Status
+      %th Product
+      %th Quantity
+      %th Invoice uid
+      %th
+      %th
+      %th
+
+  %tbody
+    - @stock_transactions.each do |stock_transaction|
+      %tr
+        %td= stock_transaction.seller_id
+        %td= stock_transaction.origin_warehouse_id
+        %td= stock_transaction.destination_warehouse_id
+        %td= stock_transaction.status
+        %td= stock_transaction.product_id
+        %td= stock_transaction.quantity
+        %td= stock_transaction.invoice_uid
+        %td= link_to 'Show', stock_transaction
+        %td= link_to 'Edit', edit_stock_transaction_path(stock_transaction)
+        %td= link_to 'Destroy', stock_transaction, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Stock transaction', new_stock_transaction_path

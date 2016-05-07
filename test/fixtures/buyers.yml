@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  region: MyString
+  address: MyString
+  rating: 1
+  paiment_info: MyText
+  purchases_counter: 1
+
+two:
+  user_id: 1
+  region: MyString
+  address: MyString
+  rating: 1
+  paiment_info: MyText
+  purchases_counter: 1
