@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   mount MailsViewer::Engine => '/delivered_mails'
+
+  root to: "home#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
